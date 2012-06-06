@@ -48,7 +48,7 @@
 
 - (NSString *)decodedURLString {
 	CFStringRef result = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
-																						  (CFStringRef)self,
+																						  (__bridge CFStringRef)self,
 																						  CFSTR(""),
 																						  kCFStringEncodingUTF8);
 	

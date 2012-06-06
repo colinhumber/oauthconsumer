@@ -127,12 +127,9 @@ signatureProvider:(id<OASignatureProviding>)aProvider
 }
 
 - (void)_generateNonce {
-    CFUUIDRef theUUID = CFUUIDCreate(NULL);
-    CFStringRef string = CFUUIDCreateString(NULL, theUUID);
-	if (nonce) {
-		CFRelease(nonce);
-	}
-    nonce = (__bridge_transfer id)string;
+    CFUUIDRef uuid = CFUUIDCreate(NULL);
+    NSString *nonce = (__bridge_transfer NSString *)CFUUIDCreateString(NULL, uuid);
+    CFRelease(uuid);    
 }
 
 NSInteger normalize(id obj1, id obj2, void *context)
@@ -199,12 +196,5 @@ NSInteger normalize(id obj1, id obj2, void *context)
             [normalizedRequestParameters encodedURLString]];
 }
 
-- (void) dealloc
-{
-	if (nonce) {
-		CFRelease(nonce);
-	}
-	[super dealloc];
-}
 
 @end

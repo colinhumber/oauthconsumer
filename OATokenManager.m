@@ -206,7 +206,7 @@
 		/* iPhone specific, the manager must have got the authorized token before reaching this point */
 	NSLog(@"request token in settings %@", token);
 	if (token && token.key && [authorizedTokenKey isEqualToString:token.key]) {
-		reqToken = token
+        reqToken = token;
 		[self exchangeToken];
 		return;
 	}

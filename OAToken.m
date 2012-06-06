@@ -227,7 +227,7 @@
 
 - (NSDictionary *)parameters
 {
-	NSMutableDictionary *params = [[NSMutableDictionary alloc] init]];
+	NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
 
 	if (key) {
 		[params setObject:key forKey:@"oauth_token"];
