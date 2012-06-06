@@ -86,8 +86,8 @@ signatureProvider:(id<OASignatureProviding>)aProvider
             nonce:(NSString *)aNonce
         timestamp:(NSString *)aTimestamp {
     if ((self = [self initWithURL:aUrl consumer:aConsumer token:aToken realm:aRealm signatureProvider:aProvider])) {
-      nonce = [aNonce copy];
-      timestamp = [aTimestamp copy];
+      nonce = aNonce;
+      timestamp = aTimestamp;
     }
     
     return self;
