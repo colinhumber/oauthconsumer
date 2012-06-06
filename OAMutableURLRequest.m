@@ -59,7 +59,7 @@ signatureProvider:(id<OASignatureProviding>)aProvider {
 		if (aRealm == nil) {
 			realm = @"";
 		} else {
-			realm = [aRealm copy];
+			realm = aRealm;
 		}
 		  
 		// default to HMAC-SHA1
