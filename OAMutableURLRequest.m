@@ -128,7 +128,7 @@ signatureProvider:(id<OASignatureProviding>)aProvider
 
 - (void)_generateNonce {
     CFUUIDRef uuid = CFUUIDCreate(NULL);
-    NSString *nonce = (__bridge_transfer NSString *)CFUUIDCreateString(NULL, uuid);
+    nonce = (__bridge_transfer NSString *)CFUUIDCreateString(NULL, uuid);
     CFRelease(uuid);    
 }
 
