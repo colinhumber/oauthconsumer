@@ -33,8 +33,8 @@
     NSString *name;
     NSString *value;
 }
-@property(copy, readwrite) NSString *name;
-@property(copy, readwrite) NSString *value;
+@property(nonatomic, strong) NSString *name;
+@property(nonatomic, strong) NSString *value;
 
 - (id)initWithName:(NSString *)aName value:(NSString *)aValue;
 - (NSString *)URLEncodedName;

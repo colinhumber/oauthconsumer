@@ -16,10 +16,10 @@
 	NSData *data;
 }
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *fileName;
-@property (nonatomic, copy) NSString *contentType;
-@property (nonatomic, copy) NSData *data;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *fileName;
+@property (nonatomic, strong) NSString *contentType;
+@property (nonatomic, strong) NSData *data;
 
 - (id)initWithName:(NSString *)aName filename:(NSString *)aFilename contentType:(NSString *)aContentType data:(NSData *)aData;
 

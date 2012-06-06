@@ -32,8 +32,8 @@
 	NSString *key;
 	NSString *secret;
 }
-@property(copy, readwrite) NSString *key;
-@property(copy, readwrite) NSString *secret;
+@property(nonatomic, strong) NSString *key;
+@property(nonatomic, strong) NSString *secret;
 
 - (id)initWithKey:(const NSString *)aKey secret:(const NSString *)aSecret;
 
