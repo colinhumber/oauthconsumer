@@ -47,8 +47,8 @@
 						 delegate:nil];
 }
 
-- (id)initWithConsumer:(OAConsumer *)aConsumer token:(OAToken *)aToken oauthBase:(const NSString *)base
-				 realm:(const NSString *)aRealm callback:(const NSString *)aCallback
+- (id)initWithConsumer:(OAConsumer *)aConsumer token:(OAToken *)aToken oauthBase:(NSString *)base
+				 realm:(NSString *)aRealm callback:(NSString *)aCallback
 			  delegate:(NSObject <OATokenManagerDelegate> *)aDelegate {
 
 	if ((self = [super init])) {
