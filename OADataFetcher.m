@@ -48,6 +48,7 @@
 																  data:responseData
 															didSucceed:NO];
 
+	#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 	[delegate performSelector:didFailSelector withObject:ticket withObject:error];
 }
 
@@ -60,7 +61,7 @@
 															  response:response
 																  data:responseData
 															didSucceed:[(NSHTTPURLResponse *)response statusCode] < 400];
-
+	#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 	[delegate performSelector:didFinishSelector withObject:ticket withObject:responseData];
 }
 
